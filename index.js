@@ -1,5 +1,4 @@
 let currentInput = "";
-
 function handleInput(value) {
   const inputDisplay = document.getElementById("inputValue");
 
@@ -11,14 +10,10 @@ function handleInput(value) {
 
   inputDisplay.textContent = currentInput; 
 }
-
-
 function handleReset() {
   currentInput = "";
   document.getElementById("inputValue").textContent = "0";
 }
-
-
 function handleEvaluate() {
   try {
     const result = Function(`'use strict'; return (${currentInput})`)();
